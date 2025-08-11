@@ -1,0 +1,64 @@
+<!-- index.html -->
+<<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=100">
+  <title>Grid Layout</title>
+  <style>
+    .grid-container {
+      display: grid;
+      gap: 10px;
+      padding: 10px;
+    }
+
+    .box {
+      background-color: #4CAF50;
+      color: white;
+      font-size: 2em;
+      text-align: center;
+      padding: 20px;
+    }
+
+    @media (min-width: 768px) {
+      .grid-container {
+        grid-template-areas:
+          "A B E E"
+          "C D E E"
+          "C D F F";
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+
+      .A { grid-area: A; }
+      .B { grid-area: B; }
+      .C { grid-area: C; }
+      .D { grid-area: D; }
+      .E { grid-area: E; }
+      .F { grid-area: F; }
+    }
+
+    @media (max-width: 767px) {
+      .grid-container {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <div class="box A">
+            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png" width="200" alt="Pikachu"></div>
+    <div class="box B">
+            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png" width="200" alt="Pikachu"></div>
+    <div class="box C">
+            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png" width="200" alt="Pikachu"></div>
+    <div class="box D">  
+          <img src="https://fundacionperiodismo.org/formacion-dual/wp-content/uploads/2018/10/ronald.jpg" width="300" alt="Pikachu">
+    </div>
+    <div class="box E">
+            <img src="https://comicvine.gamespot.com/a/uploads/scale_medium/10/104794/4741800-scan%2023.jpeg" width="500" alt="Pikachu"></div>
+    <div class="box F">
+            <img src="https://art.ngfiles.com/images/5120000/5120796_85276_bruhmynameisdylan_untitled-5120796.e7f3e0e74c57cf0510799cfe10f07b0b.webp?f1697114887" width="100" alt="Pikachu"></div>
+  </div>
+</body>
+</html>
